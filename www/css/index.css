@@ -1,0 +1,197 @@
+.app{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #88b9c0;
+}
+
+h1{
+    background-color: #607d8b;
+    color: white;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.locaciones{
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.locaciones > div > label{
+    color: white;
+    font-size: x-large !important;
+}
+
+.info{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 3% 0px;
+}
+
+
+.opciones{
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    margin: 0px 10px;
+}
+
+.opciones > div > *{
+    margin: 10px 0px;
+}
+
+.sub-title{
+    font-size: x-large;
+}
+
+#actividades{
+    padding: 0px 14%;
+}
+
+#actividades label{
+    color: white;
+    font-size: x-large;
+}
+
+.registro-actividades{
+    border-style: solid;
+    border-width: thin;
+    overflow: auto;
+    margin: 1% 0px;
+    display: block;
+    height: 30%;
+    position: absolute;
+    width: 73% !important;
+    margin-top: 2em !important;
+    background-color: #e9ecef;
+}
+
+.row{
+    width: 100%;
+}
+
+.opciones img{
+    display: none;
+}
+
+.opciones img:active{
+    transform:rotate(135deg);
+    -ms-transform:rotate(135deg); /* IE 9 */
+    -webkit-transform:rotate(135deg); /* Opera, Chrome, and Safari */
+}
+
+
+@media screen and (min-width: 416px) and (max-width: 920px){
+    .opciones{
+        height: 250px;
+    }
+
+    #actividades{
+        display: none;
+    }
+
+    .opciones img{
+        height: 78px;
+        border-radius: 100%;
+        left: 23%;
+        position: absolute;
+        border-style: solid;
+        display: block;
+        bottom: 10px;
+      }
+    
+      .opciones button{
+          display: none;
+      }
+
+      .dark{
+        background-color: #239aac;
+        margin: 0px;
+        color: white;
+      }
+      
+}
+
+
+@media screen and (max-width: 415px){
+    .app{
+        background-color: #3f7086;
+    }
+
+    h1{
+        font-size: 3em !important;
+        font-weight: lighter !important;
+        text-align: center;
+        background-color: #0a4662;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .locaciones{
+        margin-top: 23%;
+    }
+
+    .locaciones > .row{
+        padding: 0px;
+        margin: 0px;
+    }   
+
+  #txt-oro{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: #443dc9;
+  }
+
+  .opciones{
+      text-align: left;
+      margin: 10px 0px;
+      background-color: #f2f2f2 !important;
+      color: #1c6586 !important;
+      padding: 0px !important;
+  }
+
+  #actividades{
+    display: block;
+    padding: 33% 0%;
+    margin: 0px;
+  }
+
+  .registro-actividades{
+    width: 100% !important;
+    border-color: #adb7c1;
+    margin-top: 0em !important;
+    padding: 0px !important;
+  }
+
+  .opciones > div {
+      display: inline-flex;
+  }
+
+  .opciones > div > div{
+    width: 95%;
+  }
+
+  .opciones img{
+    height: 65px;
+    border-radius: 100%;
+    right: 10px;
+    position: absolute;
+    border-style: solid;
+    display: block;
+  }
+
+  .opciones button{
+      display: none;
+  }
+
+  .dark{
+    background-color: #b8ebaa;
+    margin: 0px;
+    color: #49753a;
+      }
+}

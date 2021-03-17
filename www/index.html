@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/normalizer.css">
+        <title>Ninja Oro Mobile</title>
+        <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="app">
+            <h1>Ninja Oro</h1>
+            <div class="locaciones">
+
+                <div class="mb-3 row">
+                    <label for="txt-oro" class="col-sm-2 offset-md-3 col-form-label">Tu Oro:</label>
+                    <div class="col-md-3">
+                    <input id="txt-oro" type="text" class="form-control txt-info" readonly/>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">
+                    <div id="div-farmacia" class="col-md-2 opciones alert alert-primary">
+                        <div>
+                            <div>
+                                <label class="col-md-12 sub-title">Farmacia</label>
+                                <label class="col-md-12">(Gana -10 y 20 Oros)</label>
+                            </div>
+                            <img id="img-farmacia" src="img/farmacia.png" alt="Farmacia" class="btn-jugar"/>   
+                            <button id="btn-farmacia" class="btn btn-primary">Encontrar Oro</button>
+                        </div>
+                    </div>
+                    <div id="div-caverna" class="col-md-2 opciones alert alert-primary">
+                        <div>
+                            <div>
+                                <label class="col-md-12 sub-title">Caverna</label>
+                                <label class="col-md-12">(Gana -5 y 10 Oros)</label>
+                            </div>
+                            <img id="img-caverna" src="img/mineria.png" alt="Caverna" class="btn-jugar"/>   
+                            <button id="btn-caverna" class="btn btn-primary">Encontrar Oro</button>
+                        </div>
+                    </div>
+                    <div id="div-casa" class="col-md-2 opciones alert alert-primary">
+                        <div>
+                            <div>
+                                <label class="col-md-12 sub-title">Casa</label>
+                                <label class="col-md-12">(Gana -2 y 5 Oros)</label>
+                            </div>
+                            <img id="img-casa" src="img/casa.jpg" alt="Casa" class="btn-jugar"/>   
+                            <button id="btn-casa" class="btn btn-primary">Encontrar Oro</button>
+                        </div>
+                    </div>
+                    <div id="div-casino" class="col-md-2 opciones alert alert-primary">
+                        <div>
+                            <div>
+                                <label class="col-md-12 sub-title">Casino</label>
+                                <label class="col-md-12">(Gana/Obtienes -50 y 50 Oros)</label>
+                            </div>                         
+                            <img id="img-casino" src="img/dado.png" alt="Dado" class="btn-jugar"/>   
+                            <button id="btn-casino" class="btn btn-primary">Encontrar Oro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="actividades" class="row">
+                <label for="exampleFormControlTextarea1" class="form-label">Actividades:</label>
+                <div id="registro-actividades" class="registro-actividades">
+
+                </div>
+                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea> -->
+            </div>
+        </div>
+        <!-- <script src="../js/hammer.js"></script> -->
+        <script src="js/hammer.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>
